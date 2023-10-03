@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.btn {
+    all: unset;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-gray-lighter;
+    }
+
+    &-primary {
+        color: white;
+        background-color: $color-primary;
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+    &-secondary {
+        color: white;
+        background-color: $color-secondary;
+        &:hover {
+            background-color: $color-secondary-dark;
+        }
+    }
+    &-error {
+        color: white;
+        background-color: $color-error;
+        &:hover {
+            background-color: $color-error-dark;
+        }
+    }
+    &-outline {
+        background-color: transparent;
+        border-color: $color-dark;
+        color: $color-dark;
+        &:hover {
+            background-color: $color-gray-lighter;
+        }
+    }
+}
