@@ -1,1 +1,2 @@
-export { Button } from './components/Button'
+import "./style/index.scss";
+export { Button } from "./components/Button";
