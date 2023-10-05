@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve, extname, relative } from "path";
@@ -7,6 +9,14 @@ import dts from "vite-plugin-dts";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
 // https://vitejs.dev/config/
 export default defineConfig({
+  test: {
+    globals: true,
+    environment: "jsdom",
+    coverage: {
+      provider: "v8",
+      exclude: ["src/mocks", "src/store"],
+    },
+  },
   plugins: [react(), libInjectCss(), dts({ include: ["lib"] })],
   build: {
     lib: {
