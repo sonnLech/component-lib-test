@@ -1,7 +1,9 @@
 import "./assets/main.css";
-import { Button as e } from "./components/Button/Button.js";
-import { Title as m } from "./components/Typography/Title.js";
+import { IconButton as e } from "./components/IconButton/IconButton.js";
+import { Button as m } from "./components/Button/Button.js";
+import { Title as x } from "./components/Typography/Title.js";
 export {
-  e as Button,
-  m as Title
+  m as Button,
+  e as IconButton,
+  x as Title
 };
