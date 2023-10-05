@@ -4,7 +4,7 @@
 npm run build
 check=$(git status dist --porcelain);
 echo $check;
-if ["$check" != '']; then
+if ["$check"]; then
     echo "Forgot to include new build to the commit, exiting..."
     exit 1
 fi
