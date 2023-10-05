@@ -1,6 +1,6 @@
 import React from "react";
 
-export const IconButton = () => {
+export const IconButton: React.FC = () => {
   return (
     <button className="p-2 w-10 color-gray-400 border border-gray-400 bg-none hover:bg-gray-300 rounded-xl">
       <svg
