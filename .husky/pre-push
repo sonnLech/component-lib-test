@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# npm run build
+npm run build
 check=$(git status dist --porcelain);
 echo $check;
 if ["$check" != '']; then
