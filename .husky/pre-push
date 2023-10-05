@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run build
-git status
+# npm run build
+check=$(git status dist --porcelain);
+echo $check;
+if ["$check" != '']; then
+    echo "Forgot to include new build to the commit, exiting..."
+    exit 1
+fi
